@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CGS Symplex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="CGS Symplex Logo" class="img-fluid" style="max-height: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="gerenciar_funcionarios.html">Funcionários</a></li>
+                    <li class="nav-item"><a class="nav-link" href="controle_ponto.html">Controle de Ponto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="folha_pagamento.html">Folha de Pagamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recrutamento.html">Recrutamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="avaliacao_desempenho.html">Avaliação de Desempenho</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <header class="text-center">
+            <h1>Dashboard</h1>
+            <p class="lead">Visão geral das métricas e desempenho da empresa.</p>
+        </header>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Funcionários Ativos</h5>
+                        <p class="card-text">Total de funcionários ativos na empresa.</p>
+                        <h2 id="totalFuncionarios">50</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Registros de Ponto Hoje</h5>
+                        <p class="card-text">Total de registros de ponto realizados hoje.</p>
+                        <h2 id="registrosPontoHoje">30</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Total de Vendas</h5>
+                        <p class="card-text">Total de vendas realizadas este mês.</p>
+                        <h2 id="totalVendas">100</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h2>Gráfico de Registros de Ponto</h2>
+                <canvas id="pontoChart"></canvas>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h2>Atividades Recentes</h2>
+                <table class="table table-striped table-bordered mt-4">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Funcionário</th>
+                            <th>Data</th>
+                            <th>Tipo de Atividade</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>João da Silva</td>
+                            <td>2024-10-06</td>
+                            <td>Entrada</td>
+                            <td><span class="badge bg-success">Confirmado</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Maria Oliveira</td>
+                            <td>2024-10-06</td>
+                            <td>Saída</td>
+                            <td><span class="badge bg-warning">Pendente</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Carlos Santos</td>
+                            <td>2024-10-06</td>
+                            <td>Entrada</td>
+                            <td><span class="badge bg-success">Confirmado</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Ana Lima</td>
+                            <td>2024-10-06</td>
+                            <td>Saída</td>
+                            <td><span class="badge bg-danger">Atrasado</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 CGS Tech. Todos os direitos reservados. | <a href="../privacy_policy.html">Política de Privacidade</a> | <a href="../terms_of_service.html">Termos de Serviço</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Gráfico de Registros de Ponto
+        const ctx = document.getElementById('pontoChart').getContext('2d');
+        const pontoChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'],
+                datasets: [{
+                    label: 'Registros de Ponto',
+                    data: [12, 19, 3, 5, 2, 3, 9],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

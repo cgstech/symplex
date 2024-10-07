@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Pedido - CGS Symplex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="CGS Symplex Logo" class="img-fluid" style="max-height: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="visualizar_pedidos.html">Visualizar Pedidos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="historico_pedidos.html">Histórico de Pedidos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Criar Novo Pedido</h1>
+        <p class="lead">Preencha as informações do pedido abaixo.</p>
+
+        <form>
+            <div class="mb-3">
+                <label for="clienteNome" class="form-label">Nome do Cliente</label>
+                <input type="text" class="form-control" id="clienteNome" placeholder="Digite o nome do cliente" required>
+            </div>
+            <div class="mb-3">
+                <label for="clienteContato" class="form-label">Contato do Cliente</label>
+                <input type="text" class="form-control" id="clienteContato" placeholder="Digite o contato do cliente" required>
+            </div>
+            <div class="mb-3">
+                <label for="produtoSelecionado" class="form-label">Produto</label>
+                <select class="form-select" id="produtoSelecionado" required>
+                    <option value="" disabled selected>Selecione o produto</option>
+                    <option value="Produto A">Produto A</option>
+                    <option value="Produto B">Produto B</option>
+                    <option value="Produto C">Produto C</option>
+                    <!-- Adicione mais produtos conforme necessário -->
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="quantidade" class="form-label">Quantidade</label>
+                <input type="number" class="form-control" id="quantidade" placeholder="Digite a quantidade" required>
+            </div>
+            <div class="mb-3">
+                <label for="formaPagamento" class="form-label">Forma de Pagamento</label>
+                <select class="form-select" id="formaPagamento" required>
+                    <option value="" disabled selected>Selecione a forma de pagamento</option>
+                    <option value="Cartão de Crédito">Cartão de Crédito</option>
+                    <option value="Cartão de Débito">Cartão de Débito</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="Transferência">Transferência</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="desconto" class="form-label">Desconto (%)</label>
+                <input type="number" class="form-control" id="desconto" placeholder="Digite o desconto" min="0" max="100>
+            </div>
+            <button type="submit" class="btn btn-success">Criar Pedido</button>
+            <a href="visualizar_pedidos.html" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 CGS Tech. Todos os direitos reservados. | <a href="../privacy_policy.html">Política de Privacidade</a> | <a href="../terms_of_service.html">Termos de Serviço</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

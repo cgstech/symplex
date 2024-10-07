@@ -1,0 +1,85 @@
+Estrutura:
+Admin: Área para gestores/admins gerenciarem o sistema.
+
+RH: Controle de funcionários, ponto, folha de pagamento, recrutamento, avaliações de desempenho.
+Pedidos, Estoque e Vendas: Módulos dedicados para gerenciar essas áreas.
+Relatórios: Estatísticas e dados sobre o desempenho geral.
+Configurações: Ajustes gerais do sistema.
+Funcionário: Área exclusiva para funcionários.
+
+Ponto e Folha: Registro de ponto e visualização da folha de pagamento.
+Avaliações: Verificar feedbacks e atualizações de desempenho.
+Atualizar Dados: Funcionalidade para atualizar informações pessoais.
+Pedidos: Área para criação e gestão de pedidos.
+
+Criar Pedido: Interface para gerar novos pedidos.
+Acompanhar Status: Verificar o andamento de pedidos feitos.
+Estoque: Módulo de gerenciamento de produtos e movimentações de estoque.
+
+Adicionar e Editar: Gerir quantidades de produtos e cadastrar novos itens.
+Vendas: Módulo de criação e acompanhamento de vendas.
+
+Relatório de Vendas: Verificar o desempenho de vendas por período.
+Cliente: Área dedicada ao cliente para ver seus pedidos e atualizar suas informações.
+
+Suporte: Sistema de atendimento ao cliente com abertura e acompanhamento de chamados, e uma base de conhecimento para perguntas frequentes.
+
+Login/Cadastro: Página de login e criação de contas para funcionários e administradores.
+
+
+/caminho_do_seu_projeto/
+|-- index.html (ou dashboard.html)
+|-- admin/
+|   |-- dashboard.html
+|   |-- gerenciar_funcionarios.html
+|   |-- controle_ponto.html
+|   |-- folha_pagamento.html
+|   |-- recrutamento.html
+|   |-- avaliacao_desempenho.html
+|   |-- gerenciar_pedidos.html
+|   |-- gerenciar_estoque.html
+|   |-- gerenciar_vendas.html
+|   |-- relatorios.html
+|   |-- configuracoes.html
+|
+|-- funcionario/
+|   |-- dashboard.html
+|   |-- registro_ponto.html
+|   |-- visualizar_folha_pagamento.html
+|   |-- visualizar_avaliacoes.html
+|   |-- atualizar_dados.html
+|
+|-- pedidos/
+|   |-- criar_pedido.html
+|   |-- visualizar_pedidos.html
+|   |-- acompanhar_status_pedido.html
+|
+|-- estoque/
+|   |-- visualizar_estoque.html
+|   |-- adicionar_estoque.html
+|   |-- editar_estoque.html
+|   |-- relatorio_movimentacao.html
+|
+|-- vendas/
+|   |-- criar_venda.html
+|   |-- visualizar_vendas.html
+|   |-- relatorio_vendas.html
+|
+|-- cliente/
+|   |-- dashboard.html
+|   |-- visualizar_pedidos_cliente.html
+|   |-- atualizar_informacoes_cliente.html
+|
+|-- suporte/
+|   |-- abrir_chamado.html
+|   |-- visualizar_chamados.html
+|   |-- base_conhecimento.html
+|
+|-- login/
+|   |-- login.html
+|   |-- cadastro.html
+
+
+A CGS Tech atua na indústria de tecnologia e desenvolvimento
+ de software, oferecendo soluções web, como e-commerce, sistemas de gestão de pedidos, plataformas
+ de RH, e serviços personalizados para simplificar processos e melhorar a eficiência de negócios.

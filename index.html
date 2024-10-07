@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGS Symplex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="CGS Symplex Logo" class="img-fluid" style="max-height: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Painel Administrativo
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                            <li><a class="dropdown-item" href="admin/dashboard.html">Home</a></li>
+                            <li><a class="dropdown-item" href="admin/add_conhecimento.html">Gerenciar Conteúdo</a></li>
+                            <li><a class="dropdown-item" href="admin/gerenciar_funcionarios.html">Gerenciar Funcionários</a></li>
+                            <li><a class="dropdown-item" href="admin/controle_ponto.html">Controle de Ponto</a></li>
+                            <li><a class="dropdown-item" href="admin/folha_pagamento.html">Folha de Pagamento</a></li>
+                            <li><a class="dropdown-item" href="admin/recrutamento.html">Recrutamento</a></li>
+                            <li><a class="dropdown-item" href="admin/avaliacao_desempenho.html">Avaliação de Desempenho</a></li>
+                            <li><a class="dropdown-item" href="admin/gerenciar_pedidos.html">Gerenciar Pedidos</a></li>
+                            <li><a class="dropdown-item" href="admin/gerenciar_estoque.html">Gerenciar Estoque</a></li>
+                            <li><a class="dropdown-item" href="admin/gerenciar_vendas.html">Gerenciar Vendas</a></li>
+                            <li><a class="dropdown-item" href="admin/relatorios.html">Relatórios</a></li>
+                            <li><a class="dropdown-item" href="admin/configuracoes.html">Configurações</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="funcionarioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Funcionário
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="funcionarioDropdown">
+                            <li><a class="dropdown-item" href="funcionario/dashboard.html">Home</a></li>
+                            <li><a class="dropdown-item" href="funcionario/registro_ponto.html">Registro de Ponto</a></li>
+                            <li><a class="dropdown-item" href="funcionario/visualizar_folha_pagamento.html">Visualizar Folha de Pagamento</a></li>
+                            <li><a class="dropdown-item" href="funcionario/visualizar_avaliacoes.html">Visualizar Avaliações</a></li>
+                            <li><a class="dropdown-item" href="funcionario/atualizar_dados.html">Atualizar Dados</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pedidosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pedidos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="pedidosDropdown">
+                            <li><a class="dropdown-item" href="pedidos/criar_pedido.html">Criar Pedido</a></li>
+                            <li><a class="dropdown-item" href="pedidos/visualizar_pedidos.html">Visualizar Pedidos</a></li>
+                            <li><a class="dropdown-item" href="pedidos/acompanhar_status_pedido.html">Acompanhar Status</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="estoqueDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Estoque
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="estoqueDropdown">
+                            <li><a class="dropdown-item" href="estoque/visualizar_estoque.html">Visualizar Estoque</a></li>
+                            <li><a class="dropdown-item" href="estoque/adicionar_estoque.html">Adicionar Estoque</a></li>
+                            <li><a class="dropdown-item" href="estoque/editar_estoque.html">Editar Estoque</a></li>
+                            <li><a class="dropdown-item" href="estoque/relatorio_movimentacao.html">Relatório de Movimentação</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="vendasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Vendas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="vendasDropdown">
+                            <li><a class="dropdown-item" href="vendas/criar_venda.html">Criar Venda</a></li>
+                            <li><a class="dropdown-item" href="vendas/visualizar_vendas.html">Visualizar Vendas</a></li>
+                            <li><a class="dropdown-item" href="vendas/relatorio_vendas.html">Relatório de Vendas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="clienteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cliente
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="clienteDropdown">
+                            <li><a class="dropdown-item" href="cliente/visualizar_pedidos_cliente.html">Visualizar Pedidos</a></li>
+                            <li><a class="dropdown-item" href="cliente/atualizar_informacoes_cliente.html">Atualizar Informações</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="suporteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Suporte
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="suporteDropdown">
+                            <li><a class="dropdown-item" href="suporte/dashboard.html">Home</a></li>
+                            <li><a class="dropdown-item" href="suporte/abrir_chamado.html">Abrir Chamado</a></li>
+                            <li><a class="dropdown-item" href="suporte/visualizar_chamados.html">Visualizar Chamados</a></li>
+                            <li><a class="dropdown-item" href="suporte/base_conhecimento.html">Base de Conhecimento</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wave"></div>
+    <div class="container mt-5">
+        <header class="text-center welcome-header">
+            <h1>Bem-vindo ao <img src="img/logo.png" alt="CGS Symplex Logo" class="img-fluid" style="max-height: 50px;"></h1>
+            <p class="lead">A solução completa para simplificar a gestão de pedidos, estoque, vendas e recursos humanos.</p>
+            <a href="login/login.html" class="btn btn-primary btn-lg">Entrar Agora</a>
+        </header>
+        
+        <section class="mt-5">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="icon mb-3">
+                        <i class="bi bi-box-seam" style="font-size: 3rem;"></i>
+                    </div>
+                    <h3>Gerenciamento de Pedidos</h3>
+                    <p>Facilidade na criação, acompanhamento e gestão de pedidos em um único lugar.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon mb-3">
+                        <i class="bi bi-person-lines-fill" style="font-size: 3rem;"></i>
+                    </div>
+                    <h3>Gestão de Recursos Humanos</h3>
+                    <p>Controle de ponto, folha de pagamento e avaliações de desempenho de forma eficiente.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon mb-3">
+                        <i class="bi bi-graph-up" style="font-size: 3rem;"></i>
+                    </div>
+                    <h3>Relatórios Detalhados</h3>
+                    <p>Relatórios de vendas, estoque e desempenho para tomadas de decisões estratégicas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-5 text-center">
+            <h2>Benefícios do CGS Symplex</h2>
+            <p>O CGS Symplex oferece uma interface amigável, integração completa e suporte ao cliente para garantir que você tenha todas as ferramentas necessárias para uma gestão eficaz.</p>
+        </section>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 CGS Tech. Todos os direitos reservados. | <a href="privacy_policy.html">Política de Privacidade</a> | <a href="terms_of_service.html">Termos de Serviço</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

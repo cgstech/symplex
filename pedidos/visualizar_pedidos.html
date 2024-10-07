@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Pedidos - CGS Symplex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="CGS Symplex Logo" class="img-fluid" style="max-height: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="criar_pedido.html">Criar Pedido</a></li>
+                    <li class="nav-item"><a class="nav-link" href="historico_pedidos.html">Histórico de Pedidos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Visualizar Pedidos</h1>
+        <p class="lead">Abaixo está a lista de pedidos realizados.</p>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID do Pedido</th>
+                    <th>Nome do Cliente</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Forma de Pagamento</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#001</td>
+                    <td>Maria Silva</td>
+                    <td>Produto A</td>
+                    <td>2</td>
+                    <td>Cartão de Crédito</td>
+                    <td>Em Processamento</td>
+                    <td>
+                        <a href="detalhes_pedido.html?id=001" class="btn btn-info btn-sm">Detalhes</a>
+                        <button class="btn btn-danger btn-sm">Cancelar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#002</td>
+                    <td>João Oliveira</td>
+                    <td>Produto B</td>
+                    <td>1</td>
+                    <td>Dinheiro</td>
+                    <td>Concluído</td>
+                    <td>
+                        <a href="detalhes_pedido.html?id=002" class="btn btn-info btn-sm">Detalhes</a>
+                        <button class="btn btn-danger btn-sm">Cancelar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#003</td>
+                    <td>Ana Costa</td>
+                    <td>Produto C</td>
+                    <td>3</td>
+                    <td>Transferência</td>
+                    <td>Em Entrega</td>
+                    <td>
+                        <a href="detalhes_pedido.html?id=003" class="btn btn-info btn-sm">Detalhes</a>
+                        <button class="btn btn-danger btn-sm">Cancelar</button>
+                    </td>
+                </tr>
+                <!-- Adicione mais pedidos conforme necessário -->
+            </tbody>
+        </table>
+
+        <div class="d-flex justify-content-between mt-4">
+            <a href="criar_pedido.html" class="btn btn-primary">Criar Novo Pedido</a>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 CGS Tech. Todos os direitos reservados. | <a href="../privacy_policy.html">Política de Privacidade</a> | <a href="../terms_of_service.html">Termos de Serviço</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

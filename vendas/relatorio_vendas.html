@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Vendas - CGS Symplex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="CGS Symplex Logo" class="img-fluid" style="max-height: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="criar_venda.html">Criar Venda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="visualizar_vendas.html">Visualizar Vendas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Relatório de Vendas</h1>
+        <p class="lead">Visualize os dados das vendas em gráficos e tabelas.</p>
+
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <canvas id="vendasPorProduto" width="400" height="400"></canvas>
+            </div>
+            <div class="col-md-6">
+                <canvas id="vendasPorMetodo" width="400" height="400"></canvas>
+            </div>
+        </div>
+
+        <h2>Vendas Recentes</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Preço Unitário</th>
+                    <th>Método de Pagamento</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaVendasRecentes">
+                <!-- As vendas recentes serão adicionadas aqui dinamicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 CGS Tech. Todos os direitos reservados. | <a href="../privacy_policy.html">Política de Privacidade</a> | <a href="../terms_of_service.html">Termos de Serviço</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simulação de dados de vendas
+        const vendas = [
+            { id: 1, cliente: "João da Silva", produto: "Produto A", quantidade: 2, preco: 50.00, metodo: "Cartão de Crédito", data: "2024-10-01" },
+            { id: 2, cliente: "Maria Oliveira", produto: "Produto B", quantidade: 1, preco: 30.00, metodo: "Dinheiro", data: "2024-10-02" },
+            { id: 3, cliente: "Carlos Pereira", produto: "Produto A", quantidade: 5, preco: 20.00, metodo: "Transferência", data: "2024-10-03" },
+            { id: 4, cliente: "Ana Costa", produto: "Produto C", quantidade: 3, preco: 40.00, metodo: "Cartão de Crédito", data: "2024-10-04" },
+            { id: 5, cliente: "Pedro Santos", produto: "Produto B", quantidade: 2, preco: 30.00, metodo: "Dinheiro", data: "2024-10-05" }
+        ];
+
+        // Função para renderizar vendas recentes
+        function renderizarVendasRecentes() {
+            const tabelaVendasRecentes = document.getElementById('tabelaVendasRecentes');
+            vendas.forEach(venda => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${venda.id}</td>
+                    <td>${venda.cliente}</td>
+                    <td>${venda.produto}</td>
+                    <td>${venda.quantidade}</td>
+                    <td>R$ ${venda.preco.toFixed(2)}</td>
+                    <td>${venda.metodo}</td>
+                    <td>${venda.data}</td>
+                `;
+                tabelaVendasRecentes.appendChild(row);
+            });
+        }
+
+        // Função para criar gráficos
+        function criarGraficos() {
+            const ctxProduto = document.getElementById('vendasPorProduto').getContext('2d');
+            const ctxMetodo = document.getElementById('vendasPorMetodo').getContext('2d');
+
+            // Dados para gráfico de vendas por produto
+            const produtos = vendas.reduce((acc, venda) => {
+                acc[venda.produto] = (acc[venda.produto] || 0) + venda.quantidade;
+                return acc;
+            }, {});
+
+            // Dados para gráfico de vendas por método de pagamento
+            const metodos = vendas.reduce((acc, venda) => {
+                acc[venda.metodo] = (acc[venda.metodo] || 0) + venda.quantidade;
+                return acc;
+            }, {});
+
+            // Gráfico de vendas por produto
+            new Chart(ctxProduto, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(produtos),
+                    datasets: [{
+                        label: 'Vendas por Produto',
+                        data: Object.values(produtos),
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de vendas por método de pagamento
+            new Chart(ctxMetodo, {
+                type: 'pie',
+                data: {
+                    labels: Object.keys(metodos),
+                    datasets: [{
+                        label: 'Vendas por Método de Pagamento',
+                        data: Object.values(metodos),
+                        backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)'],
+                        borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true
+                }
+            });
+        }
+
+        // Renderiza as vendas e gráficos ao carregar a página
+        renderizarVendasRecentes();
+        criarGraficos();
+    </script>
+</body>
+</html>

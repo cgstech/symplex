@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Conhecimento - CGS Symplex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="CGS Symplex Logo" class="img-fluid" style="max-height: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="abrir_chamado.html">Abrir Chamado</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="base_conhecimento.html">Base de Conhecimento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="visualizar_chamados.html">Visualizar Chamados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Base de Conhecimento</h1>
+        <p class="lead">Encontre respostas para suas dúvidas e problemas comuns.</p>
+
+        <div class="mb-4">
+            <input type="text" class="form-control" placeholder="Pesquise na base de conhecimento...">
+        </div>
+
+        <h2>Artigos Recentes</h2>
+        <div class="card-container mb-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Como redefinir sua senha</h5>
+                    <p class="card-text">Um guia passo a passo para redefinir sua senha de acesso ao sistema.</p>
+                    <small class="text-muted">Publicado em 10 de Outubro de 2024</small>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Soluções para problemas de login</h5>
+                    <p class="card-text">Dicas para resolver problemas comuns de login.</p>
+                    <small class="text-muted">Publicado em 08 de Outubro de 2024</small>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Como abrir um chamado de suporte</h5>
+                    <p class="card-text">Aprenda como abrir um chamado de suporte eficazmente.</p>
+                    <small class="text-muted">Publicado em 05 de Outubro de 2024</small>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Dicas para usar a plataforma</h5>
+                    <p class="card-text">Descubra dicas úteis para otimizar seu uso da plataforma.</p>
+                    <small class="text-muted">Publicado em 02 de Outubro de 2024</small>
+                </div>
+            </div>
+        </div>
+
+        <h2>Tutoriais</h2>
+        <div class="card-container mb-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Como criar um pedido no sistema</h5>
+                    <p class="card-text">Um passo a passo sobre como criar e gerenciar pedidos no sistema.</p>
+                    <small class="text-muted">Publicado em 15 de Outubro de 2024</small>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Gerenciamento de funcionários</h5>
+                    <p class="card-text">Aprenda a gerenciar dados e registros de funcionários no sistema.</p>
+                    <small class="text-muted">Publicado em 16 de Outubro de 2024</small>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Controle de ponto</h5>
+                    <p class="card-text">Orientações sobre como registrar e visualizar o controle de ponto.</p>
+                    <small class="text-muted">Publicado em 17 de Outubro de 2024</small>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Visualização de folha de pagamento</h5>
+                    <p class="card-text">Entenda como visualizar suas informações de folha de pagamento.</p>
+                    <small class="text-muted">Publicado em 18 de Outubro de 2024</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 CGS Tech. Todos os direitos reservados. | <a href="../privacy_policy.html">Política de Privacidade</a> | <a href="../terms_of_service.html">Termos de Serviço</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

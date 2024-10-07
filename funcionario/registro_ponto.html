@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Ponto - CGS Symplex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="CGS Symplex Logo" class="img-fluid" style="max-height: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../funcionario/dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="registro_ponto.html">Registro de Ponto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="historico_ponto.html">Histórico de Ponto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <header class="text-center">
+            <h1>Registro de Ponto</h1>
+            <p class="lead">Registre seu horário de entrada e saída.</p>
+        </header>
+
+        <div class="row mt-4">
+            <div class="col-md-8 offset-md-2">
+                <form id="formRegistroPonto">
+                    <div class="mb-3">
+                        <label for="dataRegistro" class="form-label">Data</label>
+                        <input type="date" class="form-control" id="dataRegistro" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="horaEntrada" class="form-label">Hora de Entrada</label>
+                        <input type="time" class="form-control" id="horaEntrada" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="horaSaida" class="form-label">Hora de Saída</label>
+                        <input type="time" class="form-control" id="horaSaida" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Registrar Ponto</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 CGS Tech. Todos os direitos reservados. | <a href="../privacy_policy.html">Política de Privacidade</a> | <a href="../terms_of_service.html">Termos de Serviço</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Exemplo de manipulação de formulário
+        document.getElementById('formRegistroPonto').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Ponto registrado com sucesso!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

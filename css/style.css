@@ -1,0 +1,68 @@
+/* Importando a fonte Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa; /* Fundo leve para contraste */
+}
+
+img {
+    max-width: 100%;
+}
+
+.navbar-brand img {
+    width: 70%;
+}
+
+.container {
+   
+}
+
+header {
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #343a40; /* Cor do título */
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: #6c757d; /* Cor do texto */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Cor do botão */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+.icon {
+    color: #007bff; /* Cor dos ícones */
+}
+
+h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #343a40; /* Cor dos subtítulos */
+}
+
+section {
+    padding: 3rem 0;
+}
+
+/* Efeito de onda */
+
+
+footer {
+    width: 100vw !important;
+    padding: 1rem 0;
+    background-color: #343a40; /* Cor de fundo do footer */
+    color: #ffffff; /* Cor do texto do footer */
+}
+

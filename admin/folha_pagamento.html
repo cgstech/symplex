@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folha de Pagamento - CGS Symplex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="../img/logo.png" alt="CGS Symplex Logo" class="img-fluid" style="max-height: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Painel Administrativo
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                            <li><a class="dropdown-item" href="admin/dashboard.html">Home</a></li>
+                            <li><a class="dropdown-item" href="admin/gerenciar_funcionarios.html">Gerenciar Funcionários</a></li>
+                            <li><a class="dropdown-item" href="admin/controle_ponto.html">Controle de Ponto</a></li>
+                            <li><a class="dropdown-item" href="admin/folha_pagamento.html">Folha de Pagamento</a></li>
+                            <li><a class="dropdown-item" href="admin/recrutamento.html">Recrutamento</a></li>
+                            <li><a class="dropdown-item" href="admin/avaliacao_desempenho.html">Avaliação de Desempenho</a></li>
+                            <li><a class="dropdown-item" href="admin/gerenciar_pedidos.html">Gerenciar Pedidos</a></li>
+                            <li><a class="dropdown-item" href="admin/gerenciar_estoque.html">Gerenciar Estoque</a></li>
+                            <li><a class="dropdown-item" href="admin/gerenciar_vendas.html">Gerenciar Vendas</a></li>
+                            <li><a class="dropdown-item" href="admin/relatorios.html">Relatórios</a></li>
+                            <li><a class="dropdown-item" href="admin/configuracoes.html">Configurações</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="funcionarioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Funcionário
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="funcionarioDropdown">
+                            <li><a class="dropdown-item" href="funcionario/registro_ponto.html">Registro de Ponto</a></li>
+                            <li><a class="dropdown-item" href="funcionario/visualizar_folha_pagamento.html">Visualizar Folha de Pagamento</a></li>
+                            <li><a class="dropdown-item" href="funcionario/visualizar_avaliacoes.html">Visualizar Avaliações</a></li>
+                            <li><a class="dropdown-item" href="funcionario/atualizar_dados.html">Atualizar Dados</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pedidosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pedidos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="pedidosDropdown">
+                            <li><a class="dropdown-item" href="pedidos/criar_pedido.html">Criar Pedido</a></li>
+                            <li><a class="dropdown-item" href="pedidos/visualizar_pedidos.html">Visualizar Pedidos</a></li>
+                            <li><a class="dropdown-item" href="pedidos/acompanhar_status_pedido.html">Acompanhar Status</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="estoqueDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Estoque
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="estoqueDropdown">
+                            <li><a class="dropdown-item" href="estoque/visualizar_estoque.html">Visualizar Estoque</a></li>
+                            <li><a class="dropdown-item" href="estoque/adicionar_estoque.html">Adicionar Estoque</a></li>
+                            <li><a class="dropdown-item" href="estoque/editar_estoque.html">Editar Estoque</a></li>
+                            <li><a class="dropdown-item" href="estoque/relatorio_movimentacao.html">Relatório de Movimentação</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="vendasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Vendas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="vendasDropdown">
+                            <li><a class="dropdown-item" href="vendas/criar_venda.html">Criar Venda</a></li>
+                            <li><a class="dropdown-item" href="vendas/visualizar_vendas.html">Visualizar Vendas</a></li>
+                            <li><a class="dropdown-item" href="vendas/relatorio_vendas.html">Relatório de Vendas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="clienteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cliente
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="clienteDropdown">
+                            <li><a class="dropdown-item" href="cliente/visualizar_pedidos_cliente.html">Visualizar Pedidos</a></li>
+                            <li><a class="dropdown-item" href="cliente/atualizar_informacoes_cliente.html">Atualizar Informações</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="suporteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Suporte
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="suporteDropdown">
+                            <li><a class="dropdown-item" href="suporte/abrir_chamado.html">Abrir Chamado</a></li>
+                            <li><a class="dropdown-item" href="suporte/visualizar_chamados.html">Visualizar Chamados</a></li>
+                            <li><a class="dropdown-item" href="suporte/base_conhecimento.html">Base de Conhecimento</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="container mt-5">
+        <header class="text-center">
+            <h1>Folha de Pagamento</h1>
+            <p class="lead">Gerencie e visualize as folhas de pagamento dos funcionários.</p>
+        </header>
+
+        <div class="row mt-4">
+            <div class="col-md-12 text-end">
+                <button class="btn btn-primary" id="btnGerarRelatorio"><i class="bi bi-file-earmark-text"></i> Gerar Relatório</button>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <table class="table table-striped table-bordered mt-4">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome do Funcionário</th>
+                            <th>Mês</th>
+                            <th>Ano</th>
+                            <th>Salário Bruto</th>
+                            <th>Descontos</th>
+                            <th>Salário Líquido</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>João da Silva</td>
+                            <td>Setembro</td>
+                            <td>2024</td>
+                            <td>R$ 3.000,00</td>
+                            <td>R$ 450,00</td>
+                            <td>R$ 2.550,00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Maria Oliveira</td>
+                            <td>Setembro</td>
+                            <td>2024</td>
+                            <td>R$ 4.500,00</td>
+                            <td>R$ 675,00</td>
+                            <td>R$ 3.825,00</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Carlos Santos</td>
+                            <td>Setembro</td>
+                            <td>2024</td>
+                            <td>R$ 2.500,00</td>
+                            <td>R$ 375,00</td>
+                            <td>R$ 2.125,00</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Ana Lima</td>
+                            <td>Setembro</td>
+                            <td>2024</td>
+                            <td>R$ 3.200,00</td>
+                            <td>R$ 480,00</td>
+                            <td>R$ 2.720,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 CGS Tech. Todos os direitos reservados. | <a href="../privacy_policy.html">Política de Privacidade</a> | <a href="../terms_of_service.html">Termos de Serviço</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
